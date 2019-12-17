@@ -51,7 +51,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="podcaseImageView" destination="HXs-6P-23e" id="TbQ-bR-Fed"/>
                                             <outlet property="podcastGenre" destination="xGy-X4-1qY" id="qBx-k0-Vid"/>
                                             <outlet property="podcastImageView" destination="HXs-6P-23e" id="Rcs-v0-1h2"/>
                                             <outlet property="podcastName" destination="Glb-Be-la6" id="Ws5-Q0-C8N"/>
@@ -145,11 +144,11 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
-        <!--Item-->
+        <!--Podcasts-->
         <scene sceneID="slC-GR-cdr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H6l-gA-cp8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="sju-bn-SEr"/>
+                    <tabBarItem key="tabBarItem" title="Podcasts" id="sju-bn-SEr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OPu-mu-2ff">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -164,11 +163,11 @@
             </objects>
             <point key="canvasLocation" x="1028.985507246377" y="-298.66071428571428"/>
         </scene>
-        <!--Item-->
+        <!--Favorites-->
         <scene sceneID="XFl-v9-cL3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z5m-Md-04V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gN4-dJ-fsu"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" id="gN4-dJ-fsu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gSH-Nq-cOT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

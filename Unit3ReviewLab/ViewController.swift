@@ -40,14 +40,14 @@ class ViewController: UIViewController {
     }
     
     func loadPodcasts(searchQuery: String) {
-        PodcastSearchAPI.fetchPodcasts(for: searchQuery) { (result) in
+        PodcastSearchAPI.fetchPodcasts(for: searchQuery) { [weak self] (result) in
             switch result {
             case .failure(let appError):
                 DispatchQueue.main.async {
-                    self.showAlert(title: "App Error", message: "\(appError)")
+                    self?.showAlert(title: "App Error", message: "\(appError)")
                 }
             case .success(let podcasts):
-                self.podcasts = [podcasts]
+                self?.podcasts = podcasts
             }
         }
     }
@@ -70,7 +70,7 @@ extension ViewController: UITableViewDataSource{
 
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 170
     }
 }
 

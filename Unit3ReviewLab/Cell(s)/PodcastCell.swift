@@ -17,7 +17,7 @@ class PodcastCell: UITableViewCell {
     func configurePodcastCell(for podcastData: Podcast) {
         podcastName.text = podcastData.collectionName
         podcastGenre.text = podcastData.genres?.description
-        podcastImageView.getImage(with: podcastData.artworkUrl30 ?? "") { (result) in
+        podcastImageView.getImage(with: podcastData.artworkUrl100 ?? "") { (result) in
             switch result {
             case .failure( _):
                 DispatchQueue.main.async {
