@@ -31,20 +31,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HXs-6P-23e">
-                                                    <rect key="frame" x="20" y="0.0" width="150" height="195"/>
+                                                    <rect key="frame" x="20" y="40" width="117" height="115"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGy-X4-1qY">
-                                                    <rect key="frame" x="178" y="130" width="216" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glb-Be-la6">
+                                                    <rect key="frame" x="145" y="40" width="249" height="65"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glb-Be-la6">
-                                                    <rect key="frame" x="178" y="44" width="216" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGy-X4-1qY">
+                                                    <rect key="frame" x="145" y="113" width="249" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -54,6 +54,7 @@
                                             <outlet property="podcastGenre" destination="xGy-X4-1qY" id="qBx-k0-Vid"/>
                                             <outlet property="podcastImageView" destination="HXs-6P-23e" id="Rcs-v0-1h2"/>
                                             <outlet property="podcastName" destination="Glb-Be-la6" id="Ws5-Q0-C8N"/>
+                                            <segue destination="Q9k-nP-hPv" kind="show" id="QDO-x9-YBh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -109,21 +110,48 @@
             </objects>
             <point key="canvasLocation" x="1939.1304347826087" y="470.75892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Controller-->
         <scene sceneID="0tb-rt-N4j">
             <objects>
-                <viewController id="Q9k-nP-hPv" sceneMemberID="viewController">
+                <viewController id="Q9k-nP-hPv" customClass="DetailController" customModule="Unit3ReviewLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sdi-aa-JHy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gDi-TJ-DB4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="233"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hse-fJ-Ilg">
+                                <rect key="frame" x="20" y="354" width="374" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFa-Dv-hwA">
+                                <rect key="frame" x="20" y="423" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hXT-Pw-SD5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3Jl-Ke-Tp4"/>
+                    <navigationItem key="navigationItem" id="3Jl-Ke-Tp4">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="heart" catalog="system" id="XPs-xz-vF6"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="podcastDetailLabel" destination="dFa-Dv-hwA" id="cm3-pE-2sA"/>
+                        <outlet property="podcastImageView" destination="gDi-TJ-DB4" id="V5B-XJ-T0y"/>
+                        <outlet property="podcastNameLabel" destination="Hse-fJ-Ilg" id="bWh-kV-NfN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5TF-pf-PJ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2805.7971014492755" y="470.75892857142856"/>
+            <point key="canvasLocation" x="2813.04347826087" y="-299.33035714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5fs-dU-g5z">
@@ -183,4 +211,7 @@
             <point key="canvasLocation" x="1028.985507246377" y="470.75892857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="64" height="54"/>
+    </resources>
 </document>

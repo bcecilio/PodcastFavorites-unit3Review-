@@ -23,6 +23,7 @@
 		B77AF86123A9626B00454448 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77AF86023A9626B00454448 /* UIViewController+Alerts.swift */; };
 		B77AF86323A963C000454448 /* String+TimeStampExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77AF86223A963C000454448 /* String+TimeStampExtension.swift */; };
 		B77AF86623A969BC00454448 /* PodcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77AF86523A969BC00454448 /* PodcastCell.swift */; };
+		B7A6A14123A9820900E84DFD /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6A14023A9820900E84DFD /* DetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		B77AF86023A9626B00454448 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		B77AF86223A963C000454448 /* String+TimeStampExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+TimeStampExtension.swift"; sourceTree = "<group>"; };
 		B77AF86523A969BC00454448 /* PodcastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastCell.swift; sourceTree = "<group>"; };
+		B7A6A14023A9820900E84DFD /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				B77AF83323A94D8A00454448 /* ViewController.swift */,
+				B7A6A14023A9820900E84DFD /* DetailController.swift */,
 				B77AF85123A94E7200454448 /* FavoritesController.swift */,
 			);
 			name = "VC's";
@@ -275,6 +278,7 @@
 				B77AF85823A95C4D00454448 /* NetworkHelper.swift in Sources */,
 				B77AF86323A963C000454448 /* String+TimeStampExtension.swift in Sources */,
 				B77AF86123A9626B00454448 /* UIViewController+Alerts.swift in Sources */,
+				B7A6A14123A9820900E84DFD /* DetailController.swift in Sources */,
 				B77AF85223A94E7200454448 /* FavoritesController.swift in Sources */,
 				B77AF85A23A95C5800454448 /* AppError.swift in Sources */,
 				B77AF86623A969BC00454448 /* PodcastCell.swift in Sources */,

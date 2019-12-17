@@ -34,6 +34,13 @@ class ViewController: UIViewController {
         searchBar.delegate = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailController = segue.destination as? DetailController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("could not segue")
+        }
+        detailController.podcastDetail = podcasts[indexPath.row]
+    }
+    
     func configureRefreshControl() {
         refreshControl = UIRefreshControl()
         tableView.refreshControl = refreshControl
@@ -70,7 +77,7 @@ extension ViewController: UITableViewDataSource{
 
 extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
+        return 200
     }
 }
 
