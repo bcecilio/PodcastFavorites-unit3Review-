@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B723F99823AAB98C008B1C4B /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723F99723AAB98C008B1C4B /* FavoriteCell.swift */; };
 		B77AF83023A94D8A00454448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77AF82F23A94D8A00454448 /* AppDelegate.swift */; };
 		B77AF83223A94D8A00454448 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77AF83123A94D8A00454448 /* SceneDelegate.swift */; };
 		B77AF83423A94D8A00454448 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77AF83323A94D8A00454448 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B723F99723AAB98C008B1C4B /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		B77AF82C23A94D8A00454448 /* Unit3ReviewLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unit3ReviewLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B77AF82F23A94D8A00454448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B77AF83123A94D8A00454448 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				B77AF86523A969BC00454448 /* PodcastCell.swift */,
+				B723F99723AAB98C008B1C4B /* FavoriteCell.swift */,
 			);
 			path = "Cell(s)";
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				B77AF86323A963C000454448 /* String+TimeStampExtension.swift in Sources */,
 				B77AF86123A9626B00454448 /* UIViewController+Alerts.swift in Sources */,
 				B7A6A14123A9820900E84DFD /* DetailController.swift in Sources */,
+				B723F99823AAB98C008B1C4B /* FavoriteCell.swift in Sources */,
 				B77AF85223A94E7200454448 /* FavoritesController.swift in Sources */,
 				B77AF85A23A95C5800454448 /* AppError.swift in Sources */,
 				B77AF86623A969BC00454448 /* PodcastCell.swift in Sources */,

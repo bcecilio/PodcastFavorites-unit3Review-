@@ -13,8 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    private var refreshControl: UIRefreshControl!
-    
     var podcasts = [Podcast]() {
         didSet {
             DispatchQueue.main.async {
@@ -28,7 +26,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPodcasts(searchQuery: searchQuery)
-        configureRefreshControl()
         tableView.dataSource = self
         tableView.delegate = self
         searchBar.delegate = self
@@ -39,11 +36,6 @@ class ViewController: UIViewController {
             fatalError("could not segue")
         }
         detailController.podcastDetail = podcasts[indexPath.row]
-    }
-    
-    func configureRefreshControl() {
-        refreshControl = UIRefreshControl()
-        tableView.refreshControl = refreshControl
     }
     
     func loadPodcasts(searchQuery: String) {

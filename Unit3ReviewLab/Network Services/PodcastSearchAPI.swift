@@ -37,4 +37,59 @@ struct PodcastSearchAPI{
             }
         }
     }
+    
+    static func favoritePodcast(podcast: Podcast, completion: @escaping (Result<Bool, AppError>) -> ()) {
+        
+        let endpointURLString = "https://5c2e2a592fffe80014bd6904.mockapi.io/api/v1/favorites"
+        
+        guard let url = URL(string: endpointURLString) else {
+            completion(.failure(.badURL(endpointURLString)))
+            return
+        }
+        
+        do {
+            let data = try JSONEncoder().encode(podcast)
+            var request = URLRequest(url: url)
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpBody = data
+            request.httpMethod = "POST"
+            
+            NetworkHelper.shared.performDataTask(with: request) { (result) in
+                switch result {
+                case .failure(let appError):
+                    completion(.failure(.networkClientError(appError)))
+                case .success:
+                    completion(.success(true))
+                }
+            }
+        } catch {
+            completion(.failure(.encodingError(error)))
+        }
+    }
+    
+    static func getFavoritePodcast(completion: @escaping (Result<[Podcast], AppError>) -> ())  {
+        
+        let endpointURLString = "https://5c2e2a592fffe80014bd6904.mockapi.io/api/v1/favorites"
+        
+        guard let url = URL(string: endpointURLString) else {
+            completion(.failure(.badURL(endpointURLString)))
+            return
+        }
+        
+        let request = URLRequest(url: url)
+        
+        NetworkHelper.shared.performDataTask(with: request) { (result) in
+            switch result {
+            case .failure(let appError):
+                completion(.failure(.networkClientError(appError)))
+            case .success(let data):
+                do {
+                    let favPodcasts = try JSONDecoder().decode([Podcast].self, from: data)
+                    completion(.success(favPodcasts))
+                } catch {
+                    completion(.failure(.decodingError(error)))
+                }
+            }
+        }
+    }
 }

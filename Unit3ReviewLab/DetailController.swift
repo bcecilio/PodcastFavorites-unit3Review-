@@ -21,6 +21,29 @@ class DetailController: UIViewController {
         updateUI()
     }
     
+    @IBAction func favoriteButtonPressed(_ sender: UIBarButtonItem) {
+        guard let favoritePodcast = podcastDetail else {
+            return
+        }
+        let favorite = Podcast(artistName: favoritePodcast.artistName, collectionName: favoritePodcast.collectionName, collectionId: favoritePodcast.collectionId, artworkUrl600: favoritePodcast.artworkUrl600, genres: favoritePodcast.genres, trackId: favoritePodcast.trackId, favoritedBy: "Brendon")
+        
+        PodcastSearchAPI.favoritePodcast(podcast: favorite) { [weak self](result) in
+            DispatchQueue.main.async {
+                sender.isEnabled = true
+            }
+            switch result {
+            case .failure(let appError):
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "App Error", message: "\(appError)")
+                }
+            case .success:
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "Success!", message: "\(favoritePodcast.collectionName) was favorited!")
+                }
+            }
+        }
+    }
+    
     func updateUI() {
         guard let podcastInfo = podcastDetail else {
             print("could not load podcast info")
@@ -28,7 +51,7 @@ class DetailController: UIViewController {
         }
         podcastNameLabel.text = podcastInfo.collectionName
         podcastDetailLabel.text = podcastInfo.artistName
-        podcastImageView.getImage(with: podcastInfo.artworkUrl600 ?? "") { [weak self] (result) in
+        podcastImageView.getImage(with: podcastInfo.artworkUrl600 ) { [weak self] (result) in
             switch result {
             case .failure(let appError):
                 print("\(appError)")
