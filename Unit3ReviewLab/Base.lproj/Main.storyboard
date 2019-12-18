@@ -125,6 +125,7 @@
                                             <outlet property="favoriteGenre" destination="sq0-Bd-qjm" id="WH6-04-WlD"/>
                                             <outlet property="favoriteImageView" destination="QnE-GY-gFw" id="icL-xb-dXR"/>
                                             <outlet property="favoriteNameLabel" destination="5pN-M8-5v5" id="dOv-mS-3u1"/>
+                                            <segue destination="Q9k-nP-hPv" kind="show" id="DfP-v5-KA0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -193,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5TF-pf-PJ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2878" y="133"/>
+            <point key="canvasLocation" x="2816" y="118"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5fs-dU-g5z">
@@ -257,4 +258,7 @@
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="mic" catalog="system" width="54" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DfP-v5-KA0"/>
+    </inferredMetricsTieBreakers>
 </document>

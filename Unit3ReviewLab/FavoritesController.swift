@@ -29,6 +29,13 @@ class FavoritesController: UIViewController {
         loadFavorites()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailController = segue.destination as? DetailController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError("could not dequeue")
+        }
+        detailController.podcastDetail = favoritePodcasts[indexPath.row]
+    }
+    
     func configureRefreshControl() {
         refreshControl = UIRefreshControl()
         tableView.refreshControl = refreshControl

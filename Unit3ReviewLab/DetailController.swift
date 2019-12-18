@@ -51,12 +51,12 @@ class DetailController: UIViewController {
         }
         podcastNameLabel.text = podcastInfo.collectionName
         podcastDetailLabel.text = podcastInfo.artistName
-        podcastImageView.getImage(with: podcastInfo.artworkUrl600 ) { [weak self] (result) in
+        podcastImageView.getImage(with: podcastInfo.artworkUrl600 ) { (result) in
             switch result {
             case .failure(let appError):
                 print("\(appError)")
             case .success(let image):
-                self?.podcastImageView.image = image
+                self.podcastImageView.image = image
             }
         }
     }
